@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investigación Matemática</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF9C4;
+
+    }
+
+     header {
+      background-color: #000000;
+      color: #FFD700;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+
+    }
+
+    .logo {
+      width: 150px;
+      height: 190px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+.translate-button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+
+    nav {
+      background-color: #000000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+
+    }
+
+    nav li {
+      float: left;
+    }
+
+     nav li a {
+      display: block;
+      color: #FFD700;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+    }
+
+    nav li a:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+
+   main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    }
+ img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+     footer {
+      background-color: #000000;
+      color: #FFD700;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="imagenes/logo.png" alt="logo" />
+    <h1 id="header-title">Investigación Matemática</h1>
+    <button class="translate-button" onclick="translatePage()">Traducir al Inglés</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" id="nav-home">Inicio</a></li>
+      <li><a href="matematica.html" id="nav-math">Matemática</a></li>
+      <li><a href="robotica.html" id="nav-robotics">Robótica</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 id="main-title">Aplicación de funciones al crecimiento de la población de Guatemala</h2>
+    <p><strong id="week">Semana 8</strong></p>
+
+    <h3 id="intro-title">Introducción</h3>
+    <p id="intro-text">El estudio del crecimiento poblacional es fundamental para comprender...</p>
+
+    <h3 id="context-title">Contexto Histórico y Urbano</h3>
+    <p id="context-text">La Ciudad de Guatemala ha sido históricamente el principal receptor...</p>
+
+    <h3 id="dynamics-title">Dinámica Demográfica: 1994–2015</h3>
+    <ul>
+      <li>1994: 964,877 habitantes</li>
+      <li>2000: 955,363 habitantes</li>
+      <li>2015: 964,877 habitantes</li>
+    </ul>
+
+    <h3 id="growth-title">Crecimiento Acelerado: 2015–2024</h3>
+    <ul>
+      <li>2024: 1,229,215 habitantes</li>
+      <li>Incremento relativo: 27.4%</li>
+    </ul>
+
+    <h3 id="trend-title">Tendencias Nacionales de Urbanización</h3>
+    <ul>
+      <li>1995: 36.6%</li>
+      <li>2024: más del 56.8%</li>
+    </ul>
+
+    <h3 id="impacts-title">Implicaciones del Crecimiento</h3>
+    <p><strong>Sociales:</strong></p>
+    <ul><li>Sobrecarga de servicios públicos.</li></ul>
+
+    <p><strong>Económicas:</strong></p>
+    <ul><li>Mayor demanda de empleo.</li></ul>
+
+    <p><strong>Ambientales:</strong></p>
+    <ul><li>Contaminación y pérdida de áreas verdes.</li></ul>
+
+    <h3 id="future-title">Retos y Proyecciones a Futuro (2025–2030)</h3>
+    <ul><li>Fomento de vivienda asequible.</li></ul>
+
+    <h3 id="conclusion-title">Conclusión</h3>
+    <p id="conclusion-text">La Ciudad de Guatemala ha transitado de un crecimiento moderado...</p>
+
+    <h3 id="functions-title">Aplicación de Funciones al Crecimiento Poblacional</h3>
+    <h4 id="quadratic-title">Función Cuadrática</h4>
+    <p id="quadratic-text">La función cuadrática describe un comportamiento de crecimiento...</p>
+    <img src="imagenes/cuadratica.jpg" alt="Función cuadrática"/>
+
+    <h4 id="exponential-title">Función Exponencial</h4>
+    <p id="exponential-text">Aunque representa crecimientos rápidos...</p>
+    <img src="imagenes/exponencial.jpg" alt="Función exponencial"/>
+
+    <h4 id="logarithmic-title">Función Logarítmica</h4>
+    <p id="logarithmic-text">Representa crecimiento que se ralentiza...</p>
+    <img src="imagenes/logaritmica.jpg" alt="Función logarítmica"/>
+
+    <h4 id="linear-title">Función Lineal</h4>
+    <p id="linear-text">Representa crecimiento constante...</p>
+    <img src="imagenes/lineal.jpg" alt="Función lineal"/>
+
+    <h3 id="projection-title">Proyección del Crecimiento Poblacional</h3>
+    <p id="projection-text">La siguiente imagen muestra trayectorias proyectadas...</p>
+    <img src="imagenes/Grafica.jpg" alt="Gráfica poblacional"/>
+  </main>
+
+  <footer>
+    <p id="footer-text">© 2025 Proyectos integrados La PrepaTech. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+  let currentLanguage = 'es';
+
+  function translatePage() {
+    if (currentLanguage === 'es') {
+      // Traducir al inglés
+      document.getElementById("header-title").innerText = "Mathematical Research";
+      document.getElementById("nav-home").innerText = "Home";
+      document.getElementById("nav-math").innerText = "Mathematics";
+      document.getElementById("nav-robotics").innerText = "Robotics";
+      document.getElementById("main-title").innerText = "Application of Functions to Guatemala's Population Growth";
+      document.getElementById("week").innerText = "Week 8";
+      document.getElementById("intro-title").innerText = "Introduction";
+      document.getElementById("intro-text").innerText = "Studying population growth is key to understanding transformation...";
+      document.getElementById("context-title").innerText = "Historical and Urban Context";
+      document.getElementById("context-text").innerText = "Guatemala City is the main receiver of internal migration...";
+      document.getElementById("dynamics-title").innerText = "Demographic Dynamics: 1994–2015";
+      document.getElementById("growth-title").innerText = "Accelerated Growth: 2015–2024";
+      document.getElementById("trend-title").innerText = "National Urbanization Trends";
+      document.getElementById("impacts-title").innerText = "Growth Impacts";
+      document.getElementById("future-title").innerText = "Future Challenges and Projections (2025–2030)";
+      document.getElementById("conclusion-title").innerText = "Conclusion";
+      document.getElementById("conclusion-text").innerText = "Guatemala City has shifted from moderate to rapid growth...";
+      document.getElementById("functions-title").innerText = "Functions Applied to Population Growth";
+      document.getElementById("quadratic-title").innerText = "Quadratic Function";
+      document.getElementById("quadratic-text").innerText = "This function peaks then decreases. Not appropriate here.";
+      document.getElementById("exponential-title").innerText = "Exponential Function";
+      document.getElementById("exponential-text").innerText = "Represents fast growth, but doesn't match the actual pattern.";
+      document.getElementById("logarithmic-title").innerText = "Logarithmic Function";
+      document.getElementById("logarithmic-text").innerText = "Slows over time, unlike recent accelerated growth.";
+      document.getElementById("linear-title").innerText = "Linear Function";
+      document.getElementById("linear-text").innerText = "Constant growth. Best fit for data.";
+      document.getElementById("projection-title").innerText = "Population Growth Projection";
+      document.getElementById("projection-text").innerText = "Projected growth paths using various models.";
+      document.getElementById("footer-text").innerText = "© 2025 Integrated Projects La PrepaTech. All rights reserved.";
+      document.querySelector(".translate-button").innerText = "Traducir al Español";
+      currentLanguage = 'en';
+    } else {
+      // Traducir al español
+      document.getElementById("header-title").innerText = "Investigación Matemática";
+      document.getElementById("nav-home").innerText = "Inicio";
+      document.getElementById("nav-math").innerText = "Matemática";
+      document.getElementById("nav-robotics").innerText = "Robótica";
+      document.getElementById("main-title").innerText = "Aplicación de funciones al crecimiento de la población de Guatemala";
+      document.getElementById("week").innerText = "Semana 8";
+      document.getElementById("intro-title").innerText = "Introducción";
+      document.getElementById("intro-text").innerText = "El estudio del crecimiento poblacional es fundamental para comprender...";
+      document.getElementById("context-title").innerText = "Contexto Histórico y Urbano";
+      document.getElementById("context-text").innerText = "La Ciudad de Guatemala ha sido históricamente el principal receptor...";
+      document.getElementById("dynamics-title").innerText = "Dinámica Demográfica: 1994–2015";
+      document.getElementById("growth-title").innerText = "Crecimiento Acelerado: 2015–2024";
+      document.getElementById("trend-title").innerText = "Tendencias Nacionales de Urbanización";
+      document.getElementById("impacts-title").innerText = "Implicaciones del Crecimiento";
+      document.getElementById("future-title").innerText = "Retos y Proyecciones a Futuro (2025–2030)";
+      document.getElementById("conclusion-title").innerText = "Conclusión";
+      document.getElementById("conclusion-text").innerText = "La Ciudad de Guatemala ha transitado de un crecimiento moderado...";
+      document.getElementById("functions-title").innerText = "Aplicación de Funciones al Crecimiento Poblacional";
+      document.getElementById("quadratic-title").innerText = "Función Cuadrática";
+      document.getElementById("quadratic-text").innerText = "La función cuadrática describe un comportamiento de crecimiento...";
+      document.getElementById("exponential-title").innerText = "Función Exponencial";
+      document.getElementById("exponential-text").innerText = "Aunque representa crecimientos rápidos...";
+      document.getElementById("logarithmic-title").innerText = "Función Logarítmica";
+      document.getElementById("logarithmic-text").innerText = "Representa crecimiento que se ralentiza...";
+      document.getElementById("linear-title").innerText = "Función Lineal";
+      document.getElementById("linear-text").innerText = "Representa crecimiento constante...";
+      document.getElementById("projection-title").innerText = "Proyección del Crecimiento Poblacional";
+      document.getElementById("projection-text").innerText = "La siguiente imagen muestra trayectorias proyectadas...";
+      document.getElementById("footer-text").innerText = "© 2025 Proyectos integrados La PrepaTech. Todos los derechos reservados.";
+      document.querySelector(".translate-button").innerText = "Translate to English";
+      currentLanguage = 'es';
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

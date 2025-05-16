@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyecto de unidad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF9C4;
+    }
+
+    header {
+      background-color: #000000;
+      color: #FFD700;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      width: 150px;
+      height: 190px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .translate-button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav {
+      background-color: #000000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      float: left;
+    }
+
+    nav li a {
+      display: block;
+      color: #FFD700;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    nav li a:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #000000;
+      color: #FFD700;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="imagenes/logo.png" alt="logo" />
+    <h1 id="header-title">Proyecto Grupo 02</h1>
+    <h2 id="subtitle">Bobrito Bandito</h2>
+    <button class="translate-button" onclick="translatePage()">Traducir al Inglés</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" id="home-link">Inicio</a></li>
+      <li><a href="matematica.html" id="math-link">Matemática</a></li>
+      <li><a href="robotica.html" id="robotics-link">Robótica</a></li>
+    </ul>
+  </nav>
+
+  <img src="imagenes/portada.jpg" alt="Imagen de portada" class="portada" />
+
+  <main>
+    <h2 id="main-title">Bienvenido Proyecto de Unidad</h2>
+    <p id="intro-text">Este Proyecto con menú de navegación para los diferentes cursos.</p>
+    <p id="instruction-text">Haz clic en los enlaces del menú para visitar.</p>
+  </main>
+
+  <footer>
+    © 2025 Proyectos integrados La PrepaTech. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    let isSpanish = true;
+
+    const translations = {
+      es: {
+        headerTitle: "Proyecto Grupo 02",
+        subtitle: "Bobrito Bandito",
+        buttonText: "Traducir al Inglés",
+        homeLink: "Inicio",
+        mathLink: "Matemática",
+        roboticsLink: "Robótica",
+        mainTitle: "Bienvenido Proyecto de Unidad",
+        introText: "Este Proyecto con menú de navegación para los diferentes cursos.",
+        instructionText: "Haz clic en los enlaces del menú para visitar."
+      },
+      en: {
+        headerTitle: "Group Project 02",
+        subtitle: "Bobrito Bandito",
+        buttonText: "Translate to Spanish",
+        homeLink: "Home",
+        mathLink: "Math",
+        roboticsLink: "Robotics",
+        mainTitle: "Welcome to the Unit Project",
+        introText: "This project includes a navigation menu for different subjects.",
+        instructionText: "Click on the menu links to visit each section."
+      }
+    };
+
+    function translatePage() {
+      const lang = isSpanish ? 'en' : 'es';
+      document.getElementById('header-title').textContent = translations[lang].headerTitle;
+      document.getElementById('subtitle').textContent = translations[lang].subtitle;
+      document.querySelector('.translate-button').textContent = translations[lang].buttonText;
+      document.getElementById('home-link').textContent = translations[lang].homeLink;
+      document.getElementById('math-link').textContent = translations[lang].mathLink;
+      document.getElementById('robotics-link').textContent = translations[lang].roboticsLink;
+      document.getElementById('main-title').textContent = translations[lang].mainTitle;
+      document.getElementById('intro-text').textContent = translations[lang].introText;
+      document.getElementById('instruction-text').textContent = translations[lang].instructionText;
+      isSpanish = !isSpanish;
+    }
+  </script>
+</body>
+</html>
+
+
+
+

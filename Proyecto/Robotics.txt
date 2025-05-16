@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyecto de unidad</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF9C4;
+
+    }
+
+     header {
+      background-color: #000000;
+      color: #FFD700;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+
+    }
+
+    .logo {
+      width: 150px;
+      height: 190px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+.translate-button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+
+    nav {
+      background-color: #000000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+
+    }
+
+    nav li {
+      float: left;
+    }
+
+     nav li a {
+      display: block;
+      color: #FFD700;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+    }
+
+    nav li a:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+
+   main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    }
+ img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+     footer {
+      background-color: #000000;
+      color: #FFD700;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="imagenes/logo.png" alt="logo" />
+    <h1>Proyecto Grupo 03</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="matematica.html">Matemática</a></li>
+      <li><a href="matematica.html">Math</a></li>
+      <li><a href="robotica.html">Robótica</a></li>
+      <li><a href="robotica.html">Robotics</a></li>
+    </ul>
+  </nav>
+
+  
+  <main>
+    <br>
+    <h2>Robotics</h2>
+    <p>LEGO Education SPIKE™ Prime is a complete learning solution that combines hands-on play with digital coding experiences. Drag-and-drop programming and learning modules within the SPIKE Prime app are transferred to the programmable hub to bring physical constructions to life. Regardless of the device you use, the design, coding, and app functionality are the same.</p>
+<br>
+<p>The SPIKE Prime app is required to use the set, as there is no scheduling function on the hub.</p>
+   
+<div>
+<strong> Activity 1: Getting to know the LEGO SPIKE Prime Kit </strong>
+<br> 
+<p> 1. 
+1. Identify the following components of the kit:</p>
+<ul>   
+<li> <strong> smart hub </strong> (robot brain).
+   The LEGO Spike Prime Smart Hub is the robot's brain: it controls motors and sensors, runs programs, connects via Bluetooth, and displays information in a light matrix. </p> </li> 
+</ul>
+<img  src="imagenes/Robo 1.jpg" />
+<br>
+<ul>   
+<li> <p>Engines (small and large).
+ Motors are used to provide movement and power to your robotic constructions. They allow robots to move, turn, lift objects, and perform other physical actions controlled by programming. </p> </li> 
+</ul>
+
+<img  src="imagenes/Robo 2.jpg" />
+<br> 
+<ul> 
+<li> <p>Sensors (color, force, ultrasound).
+Sensors allow the robot to interact with its environment: • Color: Detects colors and light. • Force: Measures pressure. • Ultrasound: Measures distance.
+ </p> </li>
+</ul>
+<img  src="imagenes/Robo 3.jpg" /> 
+<br>
+<ul> 
+<li> <p>Construction parts (beams, gears, connectors).
+Build robots and models. • Create movement and mechanical systems. • Connect parts securely. • Learn STEM hands-on. </p> </li>
+</ul> 
+<img  src="imagenes/Robo 4.jpg" />
+<br> 
+<strong> Actividad 2: Robot Construction </strong>
+<br> 
+<ul> 
+<p> 1. Open the LEGO SPIKE Prime app and select the block programming environment. </p>
+<p> 2. Perform the following programming exercises: </p> </li>
+           <ul>
+           <li> <p> Step 1: Have the robot drive 2 laps and then stop. </p> </li>
+           <li> <p> Step 2: Make the robot turn 180 degrees </p> </li>
+           <li> <p> Step 3: Return to the starting position. </p> </li>
+           </ul>  
+ 
+<img  src="imagenes/Robo 5.jpg" />
+<br> 
+<strong> Activity 3: Basic Programming </strong>
+<p> 1. Open the LEGO SPIKE Prime app and select the block programming environment. </p>
+<p> 2. 2. Perform the following programming exercises: </p>
+             <ul>
+            <li> <p> Step 1: Make the robot move forward 20 cm and then stop. </p> </li>
+          <li> <p> Step 2: Make the robot turn 90 degrees to the right. </p> </li>
+            <li> <p> Step 3: Use the color sensor to make the robot stop when it detects a black line. </p> </li>
+            </ul> 
+
+<img  src="imagenes/Robo 6.jpg" />
+<strong> Activity 4: Robotics Challenge </strong>
+<p> 1. Open the LEGO SPIKE Prime app and select the block programming environment.</p>
+<p>2. Perform the following programming exercises:</p>
+            <ul>
+            <li> <p> Step 1: Make the robot move forward 20 cm and then stop. </p> </li>
+            <li> <p> Step 2: Make the robot turn 90 degrees to the right.</p> </li>
+            <li> <p> Step 3: Use the proximity sensor to make the robot stop when it detects an obstacle within 20 cm</p> </li>
+            </ul> 
+  
+<img  src="imagenes/Robo 7.jpg" />
+<br> 
+<strong> Reflection Questions: </strong>
+<br>
+<p> 1. What practical applications do you think a robot could have with the programming done? </p>
+<br>
+<p>It could be used to function as a butler or for dangerous activities where the robot is the one approaching instead of a human.</p>
+
+<p> 2. What did you learn about teamwork during this activity?</p>
+<br>
+<p>You always have to look for solutions when something doesn't go as expected.</p>
+
+<br>
+
+<p>Video
+https://drive.google.com/file/d/1eTigopZlwSx51fIZVPeJjxOvnSi-_Edv/view?usp=sharing </p>
+
+
+</div>
+ 
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Proyectos integrados La PrepaTech. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+   

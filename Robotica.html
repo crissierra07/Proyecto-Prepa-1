@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Introducción a la Robótica con SPIKE Prime, Arduino y Tinkercad." />
+  <meta name="keywords" content="Robótica, Arduino, Tinkercad, SPIKE Prime, Educación" />
+  <title>Robótica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      color: #fdd835;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .translate-button {
+      background-color: #fdd835;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    .translate-button:hover {
+      background-color: #ffeb3b;
+    }
+
+    nav {
+      background-color: #1f1f1f;
+      overflow: hidden;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      display: block;
+      color: #fdd835;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #fdd835;
+      color: #000;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      color: #000000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    main h2, main h3 {
+      margin-top: 30px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+
+    main p, main ul, main li {
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #fdd835;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 100px;
+      }
+
+      .translate-button {
+        top: 80px;
+        right: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      main {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="imagenes/logo.png" alt="Logo del proyecto" />
+    <h1 id="header-title">Proyecto Grupo 03</h1>
+    <button class="translate-button" onclick="translatePage()" aria-label="Traducir al inglés">Traducir al Inglés</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" id="home-link">Inicio</a></li>
+      <li><a href="matematica.html" id="math-link">Matemática</a></li>
+      <li><a href="robotica.html" id="robotics-link" class="active">Robótica</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Introducción a la Robótica</h2>
+    <p>La robótica combina electrónica, programación y mecánica para construir robots capaces de realizar tareas automáticas y asistir en diversas industrias.</p>
+
+    <h3>¿Qué es Arduino?</h3>
+    <p>Arduino es una plataforma de hardware libre con microcontrolador y entorno de desarrollo (IDE) amigable.</p>
+    <ul>
+      <li>Permite programar dispositivos electrónicos.</li>
+      <li>Ideal para automatización, sensores y control.</li>
+      <li>Tiene múltiples versiones (UNO, Nano, Mega, etc.).</li>
+    </ul>
+
+    <h4>Ejemplos de uso:</h4>
+    <ul>
+      <li>Encender luces con sensores.</li>
+      <li>Medir temperatura y mostrarla.</li>
+      <li>Controlar un robot con ruedas.</li>
+    </ul>
+
+    <h3>¿Qué es Tinkercad?</h3>
+    <p>Tinkercad es una herramienta gratuita en línea de Autodesk para simular circuitos electrónicos sin necesidad de hardware.</p>
+    <ul>
+      <li>Simula placas Arduino.</li>
+      <li>Ideal para principiantes.</li>
+      <li>Permite probar sensores, LEDs, servos, etc.</li>
+    </ul>
+
+    <h3>Componentes Básicos de un Proyecto Robótico</h3>
+    <table>
+      <thead>
+        <tr><th>Componente</th><th>Función Principal</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Arduino UNO</td><td>Control del proyecto</td></tr>
+        <tr><td>Protoboard</td><td>Prueba sin soldar</td></tr>
+        <tr><td>LED</td><td>Indicación visual</td></tr>
+        <tr><td>Resistencia</td><td>Regula corriente</td></tr>
+        <tr><td>Sensor (PIR)</td><td>Detecta movimiento</td></tr>
+        <tr><td>Motor</td><td>Movimiento</td></tr>
+        <tr><td>Servomotor</td><td>Control de posición</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Ejemplo de Proyecto: Servo + Potenciómetro</h3>
+    <p><strong>Objetivo:</strong> Controlar un servomotor con un potenciómetro.</p>
+    <ul>
+      <li>Arduino UNO</li>
+      <li>Servomotor</li>
+      <li>Potenciómetro</li>
+      <li>Cables y protoboard</li>
+    </ul>
+    <p>El ángulo del servo depende de la posición del potenciómetro (entrada analógica → PWM).</p>
+
+    <h3>Conclusión</h3>
+    <p>Arduino y Tinkercad facilitan el aprendizaje práctico de robótica, fomentando la creatividad de forma segura.</p>
+
+    <!-- Sección original de SPIKE Prime -->
+    <h2 id="section-title">Robótica</h2>
+    <p id="section-description">SPIKE™ Prime de LEGO Education es una solución de aprendizaje que une el juego práctico con la programación digital.</p>
+
+    <h3 id="activity1-title">Actividad 1: Conociendo el Kit LEGO SPIKE Prime</h3>
+    <p id="activity1-text">1. Identifica los siguientes componentes del kit:</p>
+    <ul>
+      <li><strong>Hub inteligente:</strong> controla motores y sensores, ejecuta programas y se conecta vía Bluetooth.</li>
+    </ul>
+    <img src="imagenes/Robo 1.jpg" alt="Hub inteligente LEGO SPIKE" />
+    <ul>
+      <li id="motor-text">Motores (pequeño y grande). Permiten el movimiento.</li>
+    </ul>
+    <img src="imagenes/Robo 2.jpg" alt="Motores LEGO SPIKE" />
+    <ul>
+      <li id="sensor-text">Sensores (color, fuerza, ultrasonido). Interacción con el entorno.</li>
+    </ul>
+    <img src="imagenes/Robo 3.jpg" alt="Sensores LEGO SPIKE" />
+    <ul>
+      <li id="pieces-text">Piezas de construcción (vigas, engranajes, conectores).</li>
+    </ul>
+    <img src="imagenes/Robo 4.jpg" alt="Piezas del kit LEGO SPIKE" />
+
+    <h3 id="activity2-title">Actividad 2: Construcción del Robot</h3>
+    <p id="activity2-step1">1. Abre la aplicación SPIKE Prime y selecciona el entorno de bloques.</p>
+    <p id="activity2-step2">2. Realiza los siguientes ejercicios:</p>
+    <ul>
+      <li id="step1">Paso 1: Avanza 2 vueltas y se detiene.</li>
+      <li id="step2">Paso 2: Gira 180 grados.</li>
+      <li id="step3">Paso 3: Regresa a la posición inicial.</li>
+    </ul>
+    <img src="imagenes/Robo 5.jpg" alt="Construcción del robot" />
+
+    <h3 id="activity3-title">Actividad 3: Programación Básica</h3>
+    <ul>
+      <li>Avanza 20 cm y se detiene.</li>
+      <li>Gira 90 grados a la derecha.</li>
+      <li>Se detiene al detectar una línea negra con sensor de color.</li>
+    </ul>
+    <img src="imagenes/Robo 6.jpg" alt="Programación básica" />
+
+    <h3 id="activity4-title">Actividad 4: Desafío de Robótica</h3>
+    <ul>
+      <li>Avanza 20 cm y se detiene.</li>
+      <li>Gira 90 grados a la derecha.</li>
+      <li>Se detiene al detectar obstáculo a 20 cm.</li>
+    </ul>
+    <img src="imagenes/Robo 7.jpg" alt="Desafío robótico" />
+
+    <h3>Preguntas de Reflexión</h3>
+    <p id="reflection1">1. ¿Qué aplicaciones prácticas podría tener este robot?</p>
+    <p id="reflection-answer1">Podría servir como mayordomo o para tareas peligrosas.</p>
+    <p id="reflection2">2. ¿Qué aprendiste sobre el trabajo en equipo?</p>
+    <p id="reflection-answer2">Buscar soluciones cuando algo no funciona como se espera.</p>
+
+    <p>Video: <a href="https://drive.google.com/file/d/1eTigopZlwSx51fIZVPeJjxOvnSi-_Edv/view?usp=sharing" id="video-link">Ver Video</a></p>
+  </main>
+
+  <footer>
+    <p id="footer-text">© 2025 Proyectos integrados La PrepaTech. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+  let translated = false;
+
+  const translationsToEnglish = {
+    "Proyecto Grupo 03": "Project Group 03",
+    "Traducir al Inglés": "Translate to English",
+    "Inicio": "Home",
+    "Matemática": "Mathematics",
+    "Robótica": "Robotics",
+    "Introducción a la Robótica": "Introduction to Robotics",
+    "La robótica combina electrónica, programación y mecánica para construir robots capaces de realizar tareas automáticas y asistir en diversas industrias.": "Robotics combines electronics, programming, and mechanics to build robots capable of performing automated tasks and assisting in various industries.",
+    "¿Qué es Arduino?": "What is Arduino?",
+    "Arduino es una plataforma de hardware libre con microcontrolador y entorno de desarrollo (IDE) amigable.": "Arduino is an open-source hardware platform with a microcontroller and a user-friendly development environment (IDE).",
+    "Permite programar dispositivos electrónicos.": "Allows programming electronic devices.",
+    "Ideal para automatización, sensores y control.": "Ideal for automation, sensors, and control.",
+    "Tiene múltiples versiones (UNO, Nano, Mega, etc.).": "It has multiple versions (UNO, Nano, Mega, etc.).",
+    "Ejemplos de uso:": "Usage Examples:",
+    "Encender luces con sensores.": "Turn on lights with sensors.",
+    "Medir temperatura y mostrarla.": "Measure and display temperature.",
+    "Controlar un robot con ruedas.": "Control a wheeled robot.",
+    "¿Qué es Tinkercad?": "What is Tinkercad?",
+    "Tinkercad es una herramienta gratuita en línea de Autodesk para simular circuitos electrónicos sin necesidad de hardware.": "Tinkercad is a free online tool by Autodesk for simulating electronic circuits without needing hardware.",
+    "Simula placas Arduino.": "Simulates Arduino boards.",
+    "Ideal para principiantes.": "Ideal for beginners.",
+    "Permite probar sensores, LEDs, servos, etc.": "Allows testing sensors, LEDs, servos, etc.",
+    "Componentes Básicos de un Proyecto Robótico": "Basic Components of a Robotic Project",
+    "Componente": "Component",
+    "Función Principal": "Main Function",
+    "Control del proyecto": "Project control",
+    "Prueba sin soldar": "Solderless testing",
+    "Indicación visual": "Visual indication",
+    "Regula corriente": "Current regulation",
+    "Detecta movimiento": "Motion detection",
+    "Movimiento": "Movement",
+    "Control de posición": "Position control",
+    "Ejemplo de Proyecto: Servo + Potenciómetro": "Project Example: Servo + Potentiometer",
+    "Objetivo:": "Objective:",
+    "Controlar un servomotor con un potenciómetro.": "Control a servo motor with a potentiometer.",
+    "El ángulo del servo depende de la posición del potenciómetro (entrada analógica → PWM).": "The servo angle depends on the position of the potentiometer (analog input → PWM).",
+    "Conclusión": "Conclusion",
+    "Arduino y Tinkercad facilitan el aprendizaje práctico de robótica, fomentando la creatividad de forma segura.": "Arduino and Tinkercad facilitate practical robotics learning, encouraging creativity in a safe way.",
+    "SPIKE™ Prime de LEGO Education es una solución de aprendizaje que une el juego práctico con la programación digital.": "SPIKE™ Prime by LEGO Education is a learning solution that combines hands-on play with digital programming.",
+    "Actividad 1: Conociendo el Kit LEGO SPIKE Prime": "Activity 1: Getting to Know the LEGO SPIKE Prime Kit",
+    "1. Identifica los siguientes componentes del kit:": "1. Identify the following kit components:",
+    "Motores (pequeño y grande). Permiten el movimiento.": "Motors (small and large). Enable movement.",
+    "Sensores (color, fuerza, ultrasonido). Interacción con el entorno.": "Sensors (color, force, ultrasound). Environment interaction.",
+    "Piezas de construcción (vigas, engranajes, conectores).": "Building pieces (beams, gears, connectors).",
+    "Actividad 2: Construcción del Robot": "Activity 2: Robot Construction",
+    "1. Abre la aplicación SPIKE Prime y selecciona el entorno de bloques.": "1. Open the SPIKE Prime app and select the block environment.",
+    "2. Realiza los siguientes ejercicios:": "2. Perform the following exercises:",
+    "Paso 1: Avanza 2 vueltas y se detiene.": "Step 1: Move forward 2 turns and stop.",
+    "Paso 2: Gira 180 grados.": "Step 2: Turn 180 degrees.",
+    "Paso 3: Regresa a la posición inicial.": "Step 3: Return to the initial position.",
+    "Actividad 3: Programación Básica": "Activity 3: Basic Programming",
+    "Avanza 20 cm y se detiene.": "Move forward 20 cm and stop.",
+    "Gira 90 grados a la derecha.": "Turn 90 degrees to the right.",
+    "Se detiene al detectar una línea negra con sensor de color.": "Stops when detecting a black line with color sensor.",
+    "Actividad 4: Desafío de Robótica": "Activity 4: Robotics Challenge",
+    "Se detiene al detectar obstáculo a 20 cm.": "Stops when detecting an obstacle at 20 cm.",
+    "Preguntas de Reflexión": "Reflection Questions",
+    "1. ¿Qué aplicaciones prácticas podría tener este robot?": "1. What practical applications could this robot have?",
+    "Podría servir como mayordomo o para tareas peligrosas.": "It could serve as a butler or for hazardous tasks.",
+    "2. ¿Qué aprendiste sobre el trabajo en equipo?": "2. What did you learn about teamwork?",
+    "Buscar soluciones cuando algo no funciona como se espera.": "Find solutions when things don't work as expected.",
+    "Ver Video": "Watch Video",
+    "© 2025 Proyectos integrados La PrepaTech. Todos los derechos reservados.": "© 2025 Integrated Projects La PrepaTech. All rights reserved."
+  };
+
+  const translationsToSpanish = Object.fromEntries(
+    Object.entries(translationsToEnglish).map(([es, en]) => [en, es])
+  );
+
+  function translatePage() {
+    const elements = document.querySelectorAll("body *");
+
+    const dictionary = translated ? translationsToSpanish : translationsToEnglish;
+
+    elements.forEach(el => {
+      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === Node.TEXT_NODE) {
+        const text = el.innerText.trim();
+        if (dictionary[text]) {
+          el.innerText = dictionary[text];
+        }
+      } else if (el.tagName === "A" && dictionary[el.textContent.trim()]) {
+        el.textContent = dictionary[el.textContent.trim()];
+      }
+    });
+
+    const button = document.querySelector(".translate-button");
+    button.innerText = translated ? "Traducir al Inglés" : "Translate to Spanish";
+
+    translated = !translated;
+  }
+</script> 
+</body>
+</html>
